@@ -1,0 +1,10 @@
+step,records
+Contract notices published 2010-2025 with a recorded value,648086
+of which Commonwealth amendment notices,161398
+amendment notices whose parent is outside the study window (dropped),23719
+Contracts (one row per parent notice),486688
+recorded value of zero or less (no logarithm),1346
+"recorded value above zero and at most A$1 (placeholders, excluded)",431
+Contracts analysed,484911
+of which Commonwealth,439690
+Agencies,813

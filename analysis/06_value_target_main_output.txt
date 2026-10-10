@@ -1,0 +1,51 @@
+Balanced panel: 95 agencies present in the evaluation year of all eleven origins
+2015 {'all8': 0.5649, 'seven': 0.5374, 'six': 0.376, 'hist24': 0.1538, 'floor': 0.0486, 'floor24': 0.0495, 'ceiling': 0.3343, 'sentinel': 0.0124, 'di_balanced': 0.5537}
+2016 {'all8': 0.5424, 'seven': 0.5212, 'six': 0.3, 'hist24': 0.0994, 'floor': 0.0391, 'floor24': 0.0604, 'ceiling': 0.447, 'sentinel': -0.0263, 'di_balanced': 0.5441}
+2017 {'all8': 0.5595, 'seven': 0.525, 'six': 0.3771, 'hist24': 0.117, 'floor': 0.0617, 'floor24': 0.0526, 'ceiling': 0.326, 'sentinel': -0.0291, 'di_balanced': 0.554}
+2018 {'all8': 0.5735, 'seven': 0.5435, 'six': 0.4019, 'hist24': 0.1079, 'floor': 0.0522, 'floor24': 0.044, 'ceiling': 0.2993, 'sentinel': -0.0293, 'di_balanced': 0.5673}
+2019 {'all8': 0.5691, 'seven': 0.5335, 'six': 0.3854, 'hist24': 0.1099, 'floor': 0.0625, 'floor24': 0.0565, 'ceiling': 0.3227, 'sentinel': -0.0144, 'di_balanced': 0.566}
+2020 {'all8': 0.5831, 'seven': 0.5569, 'six': 0.4027, 'hist24': 0.0736, 'floor': 0.0449, 'floor24': 0.0372, 'ceiling': 0.3094, 'sentinel': -0.0649, 'di_balanced': 0.5763}
+2021 {'all8': 0.6121, 'seven': 0.589, 'six': 0.4489, 'hist24': 0.0524, 'floor': 0.0377, 'floor24': 0.0319, 'ceiling': 0.2666, 'sentinel': -0.0796, 'di_balanced': 0.6102}
+2022 {'all8': 0.6293, 'seven': 0.6094, 'six': 0.4651, 'hist24': 0.0932, 'floor': 0.0316, 'floor24': 0.0271, 'ceiling': 0.2609, 'sentinel': -0.02, 'di_balanced': 0.6359}
+2023 {'all8': 0.6191, 'seven': 0.6008, 'six': 0.4623, 'hist24': 0.0899, 'floor': 0.0296, 'floor24': 0.0268, 'ceiling': 0.2533, 'sentinel': -0.0201, 'di_balanced': 0.5992}
+2024 {'all8': 0.5955, 'seven': 0.5866, 'six': 0.4709, 'hist24': 0.0766, 'floor': 0.0149, 'floor24': 0.0208, 'ceiling': 0.2093, 'sentinel': -0.0022, 'di_balanced': 0.5849}
+2025 {'all8': 0.5798, 'seven': 0.5842, 'six': 0.4575, 'hist24': -0.0049, 'floor': -0.0076, 'floor24': -0.0002, 'ceiling': 0.211, 'sentinel': -0.0148, 'di_balanced': 0.576}
+
+Hindsight share over the nine fully observed origins
+  floor   mean 4.5% (range 3.0% to 6.3%)
+  floor at equal exposure (24-month form) mean 4.3%; first 5.0%, last 2.7%
+  ceiling mean 31.3% (range 25.3% to 44.7%)
+  floors at censored origins: 2024 1.5%, 2025 -0.8%
+
+Trend tests (Mann-Kendall p, Sen slope)
+                                              series  origins  first   last     tau   mk_p  sen_slope family  holm_p  ci_lo  ci_hi
+                                DI, all eight blocks     11.0 0.5649 0.5798  0.5636 0.0165     0.0053      H  0.0496    NaN    NaN
+                     DI, seven at-publication blocks     11.0 0.5374 0.5842  0.5636 0.0165     0.0079      H  0.0496    NaN    NaN
+         DI, amendment history alone (24-month form)      9.0 0.1538 0.0899 -0.5556 0.0446    -0.0060      H  0.0496    NaN    NaN
+                          DI, six descriptive blocks     11.0 0.3760 0.4575  0.7818 0.0003     0.0121   None     NaN    NaN    NaN
+                                  Total SD of target     11.0 1.5354 1.7052  0.8182 0.0001     0.0170   None     NaN    NaN    NaN
+                       Residual SD, all eight blocks     11.0 1.0128 1.1054  0.1636 0.5423     0.0018   None     NaN    NaN    NaN
+                           Residual SD, seven blocks     11.0 1.0443 1.0996 -0.0545 0.8793    -0.0016   None     NaN    NaN    NaN
+Residual SD, amendment history alone (24-month form)      9.0 1.4124 1.6277  0.6667 0.0127     0.0243   None     NaN    NaN    NaN
+                           DI, balanced agency panel     11.0 0.5537 0.5760  0.5636 0.0165     0.0051   None     NaN    NaN    NaN
+                             Floor at equal exposure      9.0 0.0495 0.0268 -0.7222 0.0059    -0.0043   None     NaN    NaN    NaN
+                                             Ceiling      9.0 0.3343 0.2533 -0.8333 0.0009    -0.0119   None     NaN    NaN    NaN
+       Increment of the term block (seven minus six)      9.0 0.1614 0.1385 -0.5556 0.0446    -0.0027   None     NaN    NaN    NaN
+  DI all eight: last three origins minus first three      NaN 0.5556 0.5981  0.0425 0.0240        NaN    NaN     NaN 0.0063 0.0631
+
+DI by origin
+ origin  n_eval   all8  all8_lo  all8_hi  total_sd  all8_rsd  di_balanced  sentinel
+   2015   29352 0.5649   0.5250   0.6204    1.5354    1.0128       0.5537    0.0124
+   2016   30229 0.5424   0.5144   0.5738    1.6103    1.0893       0.5441   -0.0263
+   2017   29351 0.5595   0.5301   0.6087    1.5924    1.0569       0.5540   -0.0291
+   2018   31809 0.5735   0.5410   0.6221    1.6166    1.0557       0.5673   -0.0293
+   2019   33482 0.5691   0.5443   0.6112    1.5993    1.0499       0.5660   -0.0144
+   2020   35757 0.5831   0.5553   0.6001    1.6310    1.0532       0.5763   -0.0649
+   2021   39509 0.6121   0.5887   0.6385    1.6899    1.0525       0.6102   -0.0796
+   2022   36887 0.6293   0.6082   0.6433    1.7049    1.0380       0.6359   -0.0200
+   2023   35057 0.6191   0.5964   0.6371    1.7062    1.0530       0.5992   -0.0201
+   2024   35284 0.5955   0.5397   0.6225    1.7195    1.0936       0.5849   -0.0022
+   2025   30725 0.5798   0.5488   0.6025    1.7052    1.1054       0.5760   -0.0148
+
+Mean DI all eight 0.584 | sentinel max |DI| 0.0796
+Typical multiplicative error: x/÷ 1.77 | share of predictions within a factor of two: 57.8%

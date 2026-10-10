@@ -1,0 +1,86 @@
+rows in file: 1048575
+contract notices 2010-2025: 656811 | after dropping duplicate ids: 648195
+Commonwealth parents: 439695 | amendment notices with parent: 137679 | amended contracts: 80795
+
+1. Consecutive amendment-to-amendment steps: 55917 | end date changed 0.0272 | value changed 0.9808
+   by publication year of the later notice:
+        steps  end_changed  value_changed
+yr                                       
+2010.0    479       0.0000         0.7683
+2011.0   1471       0.0000         0.8593
+2012.0   2160       0.0000         0.8667
+2013.0   2448       0.0000         0.8868
+2014.0   2721       0.0000         0.9688
+2015.0   3166       0.0003         0.9978
+2016.0   3226       0.0000         0.9978
+2017.0   3396       0.0012         0.9976
+2018.0   3460       0.0017         0.9994
+2019.0   3617       0.0064         0.9959
+2020.0   4635       0.0073         0.9996
+2021.0   4618       0.0106         0.9987
+2022.0   5156       0.0178         0.9971
+2023.0   4825       0.0151         0.9967
+2024.0   5159       0.0233         0.9969
+2025.0   5380       0.2078         0.9978
+   2025 by quarter:
+                size   mean
+published_date             
+1               1362  0.071
+2               1561  0.189
+3               1659  0.190
+4                798  0.514
+
+2. Parent to first amendment (n=77888)
+   parent value equals latest amendment value (parent overwritten): 0.9473
+   end date differs | parent overwritten:     0.0130 (n=73784)
+   end date differs | parent not overwritten: 0.3372 (n=4104)
+   not-overwritten parents, by year the first amendment was published:
+           n  end_changed  extended
+A1yr                               
+2010.0    29        0.034     0.034
+2011.0    48        0.000     0.000
+2012.0    66        0.030     0.015
+2013.0    68        0.015     0.000
+2014.0    74        0.041     0.014
+2015.0    69        0.014     0.000
+2016.0    79        0.051     0.013
+2017.0    81        0.049     0.012
+2018.0   109        0.101     0.018
+2019.0   129        0.093     0.016
+2020.0   157        0.108     0.019
+2021.0   242        0.302     0.182
+2022.0   247        0.377     0.162
+2023.0   191        0.209     0.037
+2024.0   259        0.236     0.066
+2025.0  2256        0.470     0.436
+   share of parents not overwritten, by year of first amendment:
+A1yr
+2010.0    0.013
+2011.0    0.014
+2012.0    0.015
+2013.0    0.016
+2014.0    0.019
+2015.0    0.017
+2016.0    0.017
+2017.0    0.018
+2018.0    0.022
+2019.0    0.025
+2020.0    0.027
+2021.0    0.038
+2022.0    0.038
+2023.0    0.033
+2024.0    0.042
+2025.0    0.359
+
+3. First amendments published in 2025, parent not overwritten (n=2256)
+   median duration on parent (as first published): 323 days
+   median duration after first amendment:          365 days
+   median extension where extended:                273 days
+   for comparison, median duration of never-amended parents: all years 133, published 2024-2025 184
+   median duration on parent, all later-amended contracts (mostly overwritten): 427
+
+4. amendment_value on amendment notices (n=124950): |v| >= 10,000 0.780 | zero 0.209 | non-zero under 10,000 0.011
+   first amendments with an amendment value: 69732 of 77888 | implied first-published value positive: 0.992
+   later steps where value minus amendment_value equals the previous notice's value: 0.817
+
+5. Amended contracts with a gap in amendment numbering: 0.044 | notices implied missing: 6841 of 144520

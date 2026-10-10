@@ -1,0 +1,64 @@
+2017 {'n': 27701.0, 'base_rate': 0.1723, 'p1p': 0.1426, 'auc': 0.8345, 'DI': 0.2647, 'di_lo': 0.1894, 'di_hi': 0.3375, 'cal_slope': 0.7642, 'sentinel_di': 0.0017, 'sentinel_auc': 0.5599}
+2018 {'n': 29492.0, 'base_rate': 0.1637, 'p1p': 0.1369, 'auc': 0.8371, 'DI': 0.2569, 'di_lo': 0.1698, 'di_hi': 0.3302, 'cal_slope': 0.7664, 'sentinel_di': -0.0113, 'sentinel_auc': 0.5136}
+2019 {'n': 30757.0, 'base_rate': 0.1742, 'p1p': 0.1439, 'auc': 0.8206, 'DI': 0.2346, 'di_lo': 0.1436, 'di_hi': 0.3012, 'cal_slope': 0.7, 'sentinel_di': -0.014, 'sentinel_auc': 0.5073}
+2020 {'n': 31177.0, 'base_rate': 0.1954, 'p1p': 0.1572, 'auc': 0.8395, 'DI': 0.2858, 'di_lo': 0.2051, 'di_hi': 0.3482, 'cal_slope': 0.7548, 'sentinel_di': -0.035, 'sentinel_auc': 0.4722}
+2021 {'n': 33582.0, 'base_rate': 0.2095, 'p1p': 0.1656, 'auc': 0.8255, 'DI': 0.269, 'di_lo': 0.2074, 'di_hi': 0.3006, 'cal_slope': 0.7413, 'sentinel_di': -0.0266, 'sentinel_auc': 0.4965}
+2022 {'n': 31075.0, 'base_rate': 0.1924, 'p1p': 0.1554, 'auc': 0.842, 'DI': 0.2581, 'di_lo': 0.1802, 'di_hi': 0.3047, 'cal_slope': 0.8162, 'sentinel_di': -0.0261, 'sentinel_auc': 0.4856}
+2023 {'n': 27580.0, 'base_rate': 0.2018, 'p1p': 0.1611, 'auc': 0.8588, 'DI': 0.3242, 'di_lo': 0.2328, 'di_hi': 0.3751, 'cal_slope': 0.8949, 'sentinel_di': -0.0125, 'sentinel_auc': 0.5177}
+
+T1. Amendment forecast, seven at-publication blocks
+ origin  training     n  base_rate    p1p    auc     DI  di_lo  di_hi  cal_slope  sentinel_di  sentinel_auc
+   2017 2010-2014 27701     0.1723 0.1426 0.8345 0.2647 0.1894 0.3375     0.7642       0.0017        0.5599
+   2018 2011-2015 29492     0.1637 0.1369 0.8371 0.2569 0.1698 0.3302     0.7664      -0.0113        0.5136
+   2019 2012-2016 30757     0.1742 0.1439 0.8206 0.2346 0.1436 0.3012     0.7000      -0.0140        0.5073
+   2020 2013-2017 31177     0.1954 0.1572 0.8395 0.2858 0.2051 0.3482     0.7548      -0.0350        0.4722
+   2021 2014-2018 33582     0.2095 0.1656 0.8255 0.2690 0.2074 0.3006     0.7413      -0.0266        0.4965
+   2022 2015-2019 31075     0.1924 0.1554 0.8420 0.2581 0.1802 0.3047     0.8162      -0.0261        0.4856
+   2023 2016-2020 27580     0.2018 0.1611 0.8588 0.3242 0.2328 0.3751     0.8949      -0.0125        0.5177
+   trend in AUC: Mann-Kendall p 0.136, Sen slope +0.0024
+   trend in DI: Mann-Kendall p 0.381, Sen slope +0.0070
+   trend in base rate: Mann-Kendall p 0.069, Sen slope +0.0072
+   AUC range 0.821 to 0.859, mean 0.837 | sentinel: max |DI| 0.0350, max |AUC - 0.5| 0.0599
+
+T2. What recorded duration adds to the six descriptive blocks (AUC)
+ origin  base_rate  auc_six  auc_six_duration   gain  gain_permuted  gain_same_end  share_same_end
+   2017     0.1723   0.7644            0.8309 0.0665        -0.0011         0.0662          0.9991
+   2018     0.1637   0.7709            0.8337 0.0628        -0.0035         0.0622          0.9977
+   2019     0.1742   0.7372            0.8096 0.0724         0.0004         0.0715          0.9984
+   2020     0.1954   0.7633            0.8334 0.0701        -0.0005         0.0698          0.9980
+   2021     0.2095   0.7416            0.8173 0.0757         0.0001         0.0768          0.9901
+   2022     0.1924   0.7421            0.8387 0.0966         0.0004         0.0956          0.9924
+   2023     0.2018   0.7651            0.8550 0.0899         0.0012         0.0889          0.9871
+   mean: six 0.7550 | with duration 0.8312 | gain +0.0763 | permuted -0.0004 | same end date +0.0759
+   paired t-test, gain from duration against gain from the permuted column: p = 2e-06
+
+T5. Platt scaling
+ origin  di_raw  di_platt  change  slope_raw  slope_platt
+   2017  0.2623    0.2618 -0.0004     0.7639       0.7567
+   2018  0.2518    0.2522  0.0003     0.7532       0.7621
+   2019  0.2346    0.2371  0.0025     0.6953       0.7242
+   2020  0.2761    0.2778  0.0017     0.7397       0.7702
+   2021  0.2660    0.2652 -0.0007     0.7302       0.7412
+   2022  0.2616    0.2624  0.0008     0.7953       0.8461
+   2023  0.3243    0.3236 -0.0006     0.9090       0.9123
+
+T3. Training up to the year before the origin (labels as recorded today)
+ origin  auc_gap  auc_no_gap  difference
+   2017   0.8345      0.8658      0.0314
+   2018   0.8371      0.8597      0.0226
+   2019   0.8206      0.8438      0.0232
+   2020   0.8395      0.8807      0.0413
+   2021   0.8255      0.8471      0.0216
+   2022   0.8420      0.8574      0.0154
+   2023   0.8588      0.8705      0.0117
+   difference: 0.012 to 0.041, mean 0.024
+
+T4. Amendment forecast by stratum, origins 2021 to 2023 pooled
+       grouping                              stratum     n  base_rate    auc     DI      lo     hi
+Award procedure                              limited 47394     0.1064 0.8127 0.1492  0.0943 0.1685
+Award procedure                                 open 44737     0.3022 0.8176 0.2796  0.2158 0.3303
+    Entity type A. Non Corporate Commonwealth Entity 68380     0.1783 0.8553 0.2865  0.1890 0.3334
+    Entity type     B. Corporate Commonwealth Entity  1305     0.2575 0.7372 0.1503 -0.5117 0.3076
+    Entity type                              Missing 22552     0.2684 0.7988 0.2569  0.1908 0.2991
+
+T6. Compliance and amendment DI across 81 agencies: adjusted -0.063 (p 0.578); raw -0.109 (p 0.331)

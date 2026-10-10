@@ -1,0 +1,107 @@
+D1. From notices to contracts
+                                                                step  records
+          Contract notices published 2010-2025 with a recorded value   648086
+                             of which Commonwealth amendment notices   161398
+amendment notices whose parent is outside the study window (dropped)    23719
+                               Contracts (one row per parent notice)   486688
+                       recorded value of zero or less (no logarithm)     1346
+  recorded value above zero and at most A$1 (placeholders, excluded)      431
+                                                  Contracts analysed   484911
+                                               of which Commonwealth   439690
+                                                            Agencies      813
+   Commonwealth share of contracts: 90.7% | Commonwealth contracts never amended: 81.6%
+
+D2. Commonwealth notices and contracts by publication year
+      notices  amendment_notices  contracts  later_amended  amended_within_24m  share_amendment_notices
+yr                                                                                                     
+2010    23375               5085      18290          0.232               0.215                    0.218
+2011    28578               6322      22256          0.184               0.173                    0.221
+2012    32006               7724      24280          0.176               0.166                    0.241
+2013    32890               7865      25025          0.178               0.167                    0.239
+2014    35333               8026      27307          0.153               0.143                    0.227
+2015    37942               8736      29206          0.164               0.154                    0.230
+2016    37744               9217      28527          0.166               0.154                    0.244
+2017    36918               9217      27701          0.183               0.172                    0.250
+2018    39837              10345      29492          0.176               0.164                    0.260
+2019    41259              10502      30757          0.187               0.174                    0.255
+2020    43405              12228      31177          0.209               0.195                    0.282
+2021    46541              12959      33582          0.224               0.210                    0.278
+2022    44804              13729      31075          0.207               0.192                    0.306
+2023    40009              12427      27580          0.207               0.202                    0.311
+2024    41659              12987      28671          0.210               0.210                    0.312
+2025    38793              14029      24764          0.074               0.074                    0.362
+   first amendment: median 178 days after the parent notice, 95th percentile 768 days
+   amendment notices repeating the parent's agency: 99.1%; supplier: 91.4%
+   amended contracts whose parent displays the value on the latest amendment notice: 94.6%
+
+D3. Amendment recording by jurisdiction
+                    contracts  recorded_as_amended    rate
+publisher_gov_type                                        
+FED                    439690                80790  0.1837
+NSW                     28634                 2006  0.0701
+WA                       7462                    0  0.0000
+ACT                      4900                    0  0.0000
+SA                       3017                    0  0.0000
+QLD                       851                    0  0.0000
+TAS                       262                    0  0.0000
+VIC                        95                    0  0.0000
+   jurisdictions recording no amendment: 6 of 8 | agencies with 200+ contracts: 166, never recording one: 33
+
+D4. Contracts by year of first publication
+j     Commonwealth  State and territory  total
+yr                                            
+2010         18290                   24  18314
+2011         22256                   50  22306
+2012         24280                  135  24415
+2013         25025                   35  25060
+2014         27307                   67  27374
+2015         29206                  146  29352
+2016         28527                 1702  30229
+2017         27701                 1650  29351
+2018         29492                 2317  31809
+2019         30757                 2725  33482
+2020         31177                 4580  35757
+2021         33582                 5927  39509
+2022         31075                 5812  36887
+2023         27580                 7477  35057
+2024         28671                 6613  35284
+2025         24764                 5961  30725
+   growth 3.8% a year (log-linear fit); Mann-Kendall p 0.0000
+
+D5. Log contract value: 10th to 90th percentile spread is 55-fold; median A$62,450
+        mean    std  count
+yr                        
+2010  10.958  1.494  18314
+2011  10.876  1.451  22306
+2012  10.893  1.426  24415
+2013  10.931  1.479  25060
+2014  10.960  1.479  27374
+2015  11.033  1.535  29352
+2016  11.202  1.610  30229
+2017  11.235  1.592  29351
+2018  11.336  1.617  31809
+2019  11.352  1.599  33482
+2020  11.548  1.631  35757
+2021  11.727  1.690  39509
+2022  11.689  1.705  36887
+2023  11.681  1.706  35057
+2024  11.675  1.720  35284
+2025  11.587  1.705  30725
+
+D6. Differences between successive notices of a contract
+                           steps  end_date_changed  value_changed  median_change_days
+step                                                                                 
+Parent to first amendment  77888            0.0301         0.3763               365.0
+First to second            30512            0.0286         0.9683               365.0
+Second to third            13197            0.0236         0.9773               365.0
+Later steps                21933            0.0262         0.9911               365.0
+
+D7. Recorded duration by notice type, Commonwealth
+                                                         n  median_days
+type                                                                   
+Amendment notice                                  161393.0        481.0
+Parent notice, contract later amended              80790.0        427.0
+Parent notice, contract never amended             358895.0        133.0
+All notices with the amendment indicator set      144159.0        490.0
+All notices with the amendment indicator not set  456934.0        182.0
+   correlation of duration with log value: never amended 0.40, all Commonwealth 0.50

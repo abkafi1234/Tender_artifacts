@@ -1,0 +1,18 @@
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+2022
+2023
+                    n  DI six  DI seven  term increment  resid SD six  resid SD seven
+group                                                                                
+all            301433  0.4084    0.5620          0.1535        1.2593          1.0836
+later amended   51719  0.0839    0.4463          0.3625        1.5425          1.1991
+never amended  249714  0.3831    0.5141          0.1310        1.1922          1.0581
+
+Reduction in squared error from the term block, pooled 2015-2023: 124054
+  share arising on never-amended contracts: 0.608 | on later-amended contracts: 0.392
+  never-amended contracts are 0.828 of evaluation contracts

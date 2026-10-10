@@ -1,0 +1,105 @@
+G1. Jurisdiction comparison, seven at-publication blocks, origins 2023 to 2025 pooled
+              group     n     DI     lo     hi  total_sd  resid_sd
+       Commonwealth 81015 0.5551 0.5218 0.5971    1.6379    1.0925
+State and territory 20051 0.3811 0.3147 0.4460    1.4000    1.1014
+
+G2. Field availability by jurisdiction
+                       field  Commonwealth  State and territory    gap
+       publisher_entity_type         0.711                0.000  0.711
+          procurement_method         1.000                0.428  0.571
+         publisher_employees         0.799                0.423  0.375
+        parent_category_code         0.939                0.595  0.343
+               category_code         0.967                0.651  0.316
+description (20+ characters)         0.692                0.900 -0.208
+          publisher_industry         0.881                0.789  0.092
+              supplier_state         0.390                0.482 -0.091
+         publisher_portfolio         0.815                0.764  0.051
+                contract_end         1.000                0.969  0.031
+              contract_start         1.000                0.970  0.030
+               supplier_name         1.000                0.988  0.012
+        publisher_cofog_code         0.934                0.937 -0.003
+              publisher_name         1.000                1.000  0.000
+          publisher_gov_type         1.000                1.000  0.000
+            supplier_country         1.000                1.000  0.000
+
+G3. Common core keeps: ['contract_end', 'contract_start', 'publisher_cofog_code', 'publisher_gov_type', 'publisher_name', 'supplier_country', 'supplier_name'] | categorical blocks kept: ['agency', 'supp']
+              group     n     DI     lo     hi  total_sd  resid_sd
+       Commonwealth 81015 0.5223 0.4779 0.5559    1.6379    1.1321
+State and territory 20051 0.3539 0.2864 0.4149    1.4000    1.1253
+   difference shrinks by 3.3% on the common core
+
+G4. DI by jurisdiction (at least 2,000 evaluation contracts)
+group     n     DI     lo     hi  total_sd  resid_sd
+  FED 81015 0.5551 0.5219 0.5965    1.6379    1.0925
+  NSW 14558 0.2354 0.1527 0.2961    1.2034    1.0523
+   WA  2087 0.4064 0.3569 0.4452    1.4896    1.1476
+
+G5. DI by award procedure
+  group     n     DI     lo     hi  total_sd  resid_sd
+limited 49464 0.4937 0.4582 0.5568    1.5326    1.0906
+   open 38135 0.5345 0.5040 0.5751    1.6483    1.1245
+
+G6. DI by number of optional fields populated
+     group     n     DI     lo     hi  total_sd  resid_sd
+5 or fewer  7856 0.4636 0.3144 0.5626    1.4767    1.0815
+         6 12500 0.6616 0.5688 0.7059    1.7830    1.0372
+         7 30008 0.5902 0.5474 0.6299    1.6833    1.0776
+         8 38186 0.5400 0.5025 0.5821    1.6561    1.1232
+         9 12516 0.5737 0.5307 0.6086    1.6967    1.1077
+
+G7. Completeness-matched jurisdiction comparison
+ fields  n_cw  n_st  di_cw  di_st   diff  rsd_cw  rsd_st
+      5  1595  3301 0.6577 0.3088 0.3489  0.8691  1.1388
+      6  7191  5309 0.6395 0.3998 0.2397  0.9702  1.1216
+      7 24572  5436 0.5417 0.4170 0.1247  1.0863  1.0376
+      8 35503  2683 0.5256 0.4582 0.0675  1.1241  1.1118
+
+G1/G3/G5/G6 contrasts
+                              contrast   diff      lo     hi      p                                      test  holm_p
+Commonwealth minus State and territory 0.1740  0.1022 0.2499 0.0010              Jurisdiction, full field set  0.0040
+Commonwealth minus State and territory 0.1683  0.0974 0.2388 0.0010                 Jurisdiction, common core  0.0040
+                    open minus limited 0.0409 -0.0073 0.0728 0.1059                           Award procedure  0.1059
+                    9 minus 5 or fewer 0.1101  0.0030 0.2620 0.0480 Completeness, best minus worst documented  0.0960
+
+G8. Compliance index 2015-2025: Sen slope -0.0073 per year, Mann-Kendall p 0.002
+      description  category_code  parent_category_code  contract_start  contract_end  procurement_method  supplier_state  publisher_portfolio  publisher_industry  index
+yr                                                                                                                                                                      
+2015        0.728          0.970                 0.931           1.000         1.000               0.996           0.400                0.782               0.844  0.850
+2020        0.681          0.960                 0.912           0.996         0.992               0.931           0.509                0.861               0.931  0.864
+2025        0.666          0.797                 0.897           0.999         0.999               0.915           0.341                0.796               0.864  0.808
+
+G9. Compliance and DI across 71 agencies with at least 200 evaluation contracts (7 with DI below zero)
+                                                association  estimate      p  shared_var
+                       Compliance and adjusted DI (primary)    0.1167 0.3324      0.0136
+                                    Compliance and DI (raw)    0.3353 0.0043      0.1125
+                                Compliance and DI (Pearson)    0.3013 0.0107      0.0908
+                   Compliance and residual dispersion (raw)    0.0088 0.9418      0.0001
+                 Compliance and DI, given target dispersion    0.1934 0.1086      0.0374
+Compliance and residual dispersion, given target dispersion   -0.1933 0.1088      0.0374
+                            Guard: DI and target dispersion    0.7256 0.0000      0.5265
+           Guard: residual dispersion and target dispersion    0.5646 0.0000      0.3188
+                   Guard: adjusted DI and target dispersion   -0.1295 0.2816      0.0168
+                           Compliance and target dispersion    0.2864 0.0155      0.0820
+
+G10. Specification curve (dependent variable: residual dispersion; coefficient on compliance)
+                             specification    coef     se      p        direction
+                           Compliance only  0.0037 0.1425 0.9792 less informative
+                       + target dispersion -0.2244 0.1197 0.0651 more informative
+               + target dispersion + log n -0.2198 0.1200 0.0714 more informative
+        + target dispersion + jurisdiction  0.1259 0.1591 0.4315 less informative
++ target dispersion + log n + jurisdiction  0.1199 0.1607 0.4582 less informative
+
+G11. Value target by amendment status, Commonwealth, fully observed origins
+                  field_set                                contracts      n     DI  total_sd  resid_sd
+Seven at-publication blocks Never amended (value as first published) 217378 0.4303    1.3651    1.0303
+Seven at-publication blocks        Later amended (value overwritten)  51719 0.4499    1.6169    1.1991
+Seven at-publication blocks                         All Commonwealth 269097 0.5456    1.5797    1.0649
+           All eight blocks Never amended (value as first published) 217378 0.4427    1.3651    1.0191
+           All eight blocks        Later amended (value overwritten)  51719 0.5638    1.6169    1.0678
+           All eight blocks                         All Commonwealth 269097 0.5760    1.5797    1.0287
+
+G12. Sensitivity: jurisdiction comparison pooled over all eleven origins
+              group      n     DI     lo     hi  total_sd  resid_sd
+       Commonwealth 322532 0.5462 0.5227 0.5871    1.5894    1.0707
+State and territory  44910 0.3654 0.3060 0.4132    1.5036    1.1978
+   state and territory share of the training window: 2.5% at the 2018 origin, 8.1% at 2021, 16.7% at 2025

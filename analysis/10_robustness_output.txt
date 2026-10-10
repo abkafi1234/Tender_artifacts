@@ -1,0 +1,63 @@
+2015 {'boosted_depth6': 0.5649, 'boosted_depth2': 0.5209, 'penalised_linear': 0.4607, 'boosted_nontext': 0.5563, 'random_forest_nontext': 0.5467}
+2016 {'boosted_depth6': 0.5424, 'boosted_depth2': 0.5066, 'penalised_linear': 0.4622, 'boosted_nontext': 0.525, 'random_forest_nontext': 0.5386}
+2017 {'boosted_depth6': 0.5595, 'boosted_depth2': 0.5222, 'penalised_linear': 0.4684, 'boosted_nontext': 0.5487, 'random_forest_nontext': 0.5422}
+2018 {'boosted_depth6': 0.5735, 'boosted_depth2': 0.5277, 'penalised_linear': 0.353, 'boosted_nontext': 0.5724, 'random_forest_nontext': 0.5646}
+2019 {'boosted_depth6': 0.5691, 'boosted_depth2': 0.527, 'penalised_linear': 0.4479, 'boosted_nontext': 0.5585, 'random_forest_nontext': 0.5552}
+2020 {'boosted_depth6': 0.5831, 'boosted_depth2': 0.543, 'penalised_linear': 0.483, 'boosted_nontext': 0.574, 'random_forest_nontext': 0.5729}
+2021 {'boosted_depth6': 0.6121, 'boosted_depth2': 0.5704, 'penalised_linear': 0.5053, 'boosted_nontext': 0.5985, 'random_forest_nontext': 0.6}
+2022 {'boosted_depth6': 0.6293, 'boosted_depth2': 0.582, 'penalised_linear': 0.4807, 'boosted_nontext': 0.6207, 'random_forest_nontext': 0.6147}
+2023 {'boosted_depth6': 0.6191, 'boosted_depth2': 0.5855, 'penalised_linear': 0.5165, 'boosted_nontext': 0.6037, 'random_forest_nontext': 0.6072}
+2024 {'boosted_depth6': 0.5955, 'boosted_depth2': 0.5576, 'penalised_linear': 0.4927, 'boosted_nontext': 0.588, 'random_forest_nontext': 0.5787}
+2025 {'boosted_depth6': 0.5798, 'boosted_depth2': 0.5388, 'penalised_linear': 0.4793, 'boosted_nontext': 0.5714, 'random_forest_nontext': 0.5759}
+
+R1. DI on all eight blocks under four learners
+ origin  boosted_depth6  boosted_depth2  penalised_linear  boosted_nontext  random_forest_nontext
+   2015          0.5649          0.5209            0.4607           0.5563                 0.5467
+   2016          0.5424          0.5066            0.4622           0.5250                 0.5386
+   2017          0.5595          0.5222            0.4684           0.5487                 0.5422
+   2018          0.5735          0.5277            0.3530           0.5724                 0.5646
+   2019          0.5691          0.5270            0.4479           0.5585                 0.5552
+   2020          0.5831          0.5430            0.4830           0.5740                 0.5729
+   2021          0.6121          0.5704            0.5053           0.5985                 0.6000
+   2022          0.6293          0.5820            0.4807           0.6207                 0.6147
+   2023          0.6191          0.5855            0.5165           0.6037                 0.6072
+   2024          0.5955          0.5576            0.4927           0.5880                 0.5787
+   2025          0.5798          0.5388            0.4793           0.5714                 0.5759
+   depth 6 against depth 2: Pearson 0.988, rank correlation 0.982
+   trend, boosted_depth6: Mann-Kendall p 0.017
+   trend, boosted_depth2: Mann-Kendall p 0.006
+   penalised linear model lower than depth 6 by 0.080 to 0.221
+   random forest against boosted model on the same non-text blocks: largest absolute difference 0.014
+   jurisdictions at the 2025 origin (at least 500 contracts):
+jurisdiction     n  boosted_depth6  boosted_depth2
+         FED 24764          0.5290          0.4864
+         NSW  5002          0.2129          0.0986
+   rank correlation of jurisdiction ordering between depth 6 and depth 2: 1.000
+
+R2. Placeholder values (0 < value <= A$1) retained: 431 contracts, 426 of them on state and territory portals
+2015 {'n_placeholders': 1.0, 'share_sq_error': 0.0054, 'all8': 0.5628, 'seven': 0.5405, 'six': 0.3758, 'floor': 0.0397, 'ceiling': 0.3324, 'di_excluded': 0.5649}
+2016 {'n_placeholders': 3.0, 'share_sq_error': 0.0181, 'all8': 0.529, 'seven': 0.4968, 'six': 0.3116, 'floor': 0.0609, 'ceiling': 0.411, 'di_excluded': 0.5424}
+2017 {'n_placeholders': 3.0, 'share_sq_error': 0.0182, 'all8': 0.5532, 'seven': 0.5191, 'six': 0.3718, 'floor': 0.0617, 'ceiling': 0.3279, 'di_excluded': 0.5595}
+2018 {'n_placeholders': 113.0, 'share_sq_error': 0.4764, 'all8': 0.3755, 'seven': 0.3368, 'six': 0.2256, 'floor': 0.1033, 'ceiling': 0.3993, 'di_excluded': 0.5735}
+2019 {'n_placeholders': 15.0, 'share_sq_error': 0.0425, 'all8': 0.5545, 'seven': 0.5271, 'six': 0.3846, 'floor': 0.0494, 'ceiling': 0.3063, 'di_excluded': 0.5691}
+2020 {'n_placeholders': 18.0, 'share_sq_error': 0.0639, 'all8': 0.5511, 'seven': 0.5277, 'six': 0.3735, 'floor': 0.0423, 'ceiling': 0.3222, 'di_excluded': 0.5831}
+2021 {'n_placeholders': 47.0, 'share_sq_error': 0.1289, 'all8': 0.5682, 'seven': 0.5486, 'six': 0.4075, 'floor': 0.0344, 'ceiling': 0.2828, 'di_excluded': 0.6121}
+2022 {'n_placeholders': 41.0, 'share_sq_error': 0.1183, 'all8': 0.593, 'seven': 0.5736, 'six': 0.4415, 'floor': 0.0326, 'ceiling': 0.2555, 'di_excluded': 0.6293}
+2023 {'n_placeholders': 62.0, 'share_sq_error': 0.126, 'all8': 0.5736, 'seven': 0.5599, 'six': 0.4308, 'floor': 0.0239, 'ceiling': 0.2489, 'di_excluded': 0.6191}
+2024 {'n_placeholders': 91.0, 'share_sq_error': 0.1427, 'all8': 0.5554, 'seven': 0.5429, 'six': 0.4663, 'floor': 0.0226, 'ceiling': 0.1604, 'di_excluded': 0.5955}
+2025 {'n_placeholders': 35.0, 'share_sq_error': 0.1736, 'all8': 0.5276, 'seven': 0.5293, 'six': 0.4154, 'floor': -0.0032, 'ceiling': 0.2126, 'di_excluded': 0.5798}
+ origin  n_placeholders  share_sq_error   all8  seven    six   floor  ceiling  di_excluded
+   2015               1          0.0054 0.5628 0.5405 0.3758  0.0397   0.3324       0.5649
+   2016               3          0.0181 0.5290 0.4968 0.3116  0.0609   0.4110       0.5424
+   2017               3          0.0182 0.5532 0.5191 0.3718  0.0617   0.3279       0.5595
+   2018             113          0.4764 0.3755 0.3368 0.2256  0.1033   0.3993       0.5735
+   2019              15          0.0425 0.5545 0.5271 0.3846  0.0494   0.3063       0.5691
+   2020              18          0.0639 0.5511 0.5277 0.3735  0.0423   0.3222       0.5831
+   2021              47          0.1289 0.5682 0.5486 0.4075  0.0344   0.2828       0.6121
+   2022              41          0.1183 0.5930 0.5736 0.4415  0.0326   0.2555       0.6293
+   2023              62          0.1260 0.5736 0.5599 0.4308  0.0239   0.2489       0.6191
+   2024              91          0.1427 0.5554 0.5429 0.4663  0.0226   0.1604       0.5955
+   2025              35          0.1736 0.5276 0.5293 0.4154 -0.0032   0.2126       0.5798
+   trend in DI with placeholders retained: Mann-Kendall p 0.542 (excluded: 0.017)
+   hindsight share with placeholders retained: floor 5.0%, ceiling 32.1%
+   jurisdiction difference with placeholders retained: +0.319 (Commonwealth 0.545, state and territory 0.226); residual SD 1.073 and 1.798

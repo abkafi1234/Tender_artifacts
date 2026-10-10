@@ -1,0 +1,6 @@
+type,n,median_days
+Amendment notice,161393.0,481.0
+"Parent notice, contract later amended",80790.0,427.0
+"Parent notice, contract never amended",358895.0,133.0
+All notices with the amendment indicator set,144159.0,490.0
+All notices with the amendment indicator not set,456934.0,182.0

@@ -1,9 +1,9 @@
-# Hindsight in the Record
+# Disclosure Informativeness of Public Procurement Records for Forecasting under Data Leakage
 
 Code and result artefacts for the paper
 
-> Md Abdullah Al Kafi and Walayat Hussain. *Hindsight in the Record: Bounding How Much of Public
-> Procurement Disclosure Is Added After the Fact.*
+> Md Abdullah Al Kafi and Walayat Hussain. *Disclosure Informativeness of Public Procurement Records for
+> Forecasting under Data Leakage.*
 
 The paper measures how well published procurement fields forecast contract value and later
 amendment, and bounds the share of that forecastability which was added to the record after a
